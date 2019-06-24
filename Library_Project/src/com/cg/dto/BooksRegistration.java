@@ -1,0 +1,50 @@
+package com.cg.dto;
+
+import java.sql.Date;
+
+public class BooksRegistration {
+
+	private int reg_id;
+	private int book_id;
+	private int user_id;
+	private Date reg_date;
+	public int getReg_id() {
+		return reg_id;
+	}
+	public void setReg_id(int reg_id) {
+		this.reg_id = reg_id;
+	}
+	public int getBook_id() {
+		return book_id;
+	}
+	public void setBook_id(int book_id) {
+		this.book_id = book_id;
+	}
+	public int getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+	public Date getReg_date() {
+		return reg_date;
+	}
+	public void setReg_date(Date reg_date) {
+		this.reg_date = reg_date;
+	}
+	public BooksRegistration(int reg_id, int book_id, int user_id, Date reg_date) {
+		super();
+		this.reg_id = reg_id;
+		this.book_id = book_id;
+		this.user_id = user_id;
+		this.reg_date = reg_date;
+	}
+	@Override
+	public String toString() {
+		return "BooksRegistration [reg_id=" + reg_id + ", book_id=" + book_id
+				+ ", user_id=" + user_id + ", reg_date=" + reg_date + "]";
+	} 
+	
+	
+	 
+}
