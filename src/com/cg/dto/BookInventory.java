@@ -9,7 +9,7 @@ public class BookInventory {
 	private String publisher;
 	private int yearofpublisher;
 	
-	public BookInventory(){}
+	
 	
 	public BookInventory(int book_id, String book_name, String author1,
 			String author2, String publisher, int yearofpublisher) {

@@ -6,7 +6,7 @@ public class Users {
 	private String user_name;
 	private String password;
 	private String email_id;
-	private String librarian;
+	private boolean librarian;
 	public int getUser_id() {
 		return user_id;
 	}
@@ -31,20 +31,14 @@ public class Users {
 	public void setEmail_id(String email_id) {
 		this.email_id = email_id;
 	}
-	public String isLibrarian() {
+	public boolean isLibrarian() {
 		return librarian;
 	}
-	public void setLibrarian(String librarian) {
+	public void setLibrarian(boolean librarian) {
 		this.librarian = librarian;
-	}
-	
-	public Users(){}
-	public Users(String librarian){
-		this.librarian = librarian;
-
 	}
 	public Users(int user_id, String user_name, String password,
-			String email_id, String librarian) {
+			String email_id, boolean librarian) {
 		super();
 		this.user_id = user_id;
 		this.user_name = user_name;
