@@ -1,6 +1,8 @@
 package com.cg.pl;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.cg.dto.BookInventory;
@@ -27,6 +29,7 @@ public class MainLib {
             System.out.println("--Enter Your Choice--" );
             System.out.println("1.Registration");
             System.out.println("2.Login");
+            System.out.println("3.Exit");
 			c1 = sc.nextInt();
             switch(c1)
             {
@@ -46,18 +49,21 @@ public class MainLib {
             case 2:{
             	System.out.println("Enter User ID :");
             	int userid=sc.nextInt();
-            	//System.out.println("Enter password");
-            	//String password=sc.next();
+            	System.out.println("Enter password");
+                 String password=sc.next();
             	try {
-					//service.verifyUser(userid, password);
+				service.verifyUser(userid, password);
 				String lib=service.librarian(userid);
             		
             		System.out.println(lib);
             		String y="Y";
+            		
 				if(lib.equals(y)){
 					System.out.println("**Enter Your Choice :**");
 					System.out.println("1.Add Books");
 					System.out.println("2.Remove Books");
+					System.out.println("3.Show All Book Issued");
+					System.out.println("4.Exit");
 					c1=sc.nextInt();
 					switch(c1){
 					case 1:{
@@ -71,17 +77,48 @@ public class MainLib {
 					BookInventory book=service.removeBook(id);
 					System.out.println("remove book and id = "+id);
 					}break;
+					case 3:{try{ArrayList<BookInventory>list = 
+							service.getAllBooks();
+							for(BookInventory obj : list)
+							{
+								System.out.println(obj);
+							}
+							}
+							catch(LibException e)
+							{
+								System.out.println(e.getMessage());
+							}
+						
+						
+					}break;
+					case 4:{
+						System.exit(0);
+					}break;
 					default:System.out.println("invalid Choice...!!!");
 				}
 				}
-				else{
+				else{do{
 					System.out.println("**Enter Choice**");
 					System.out.println("1.Show Books");
-					System.out.println("1.Issue a book");
-					System.out.println("2.Show book Issued details");
+					System.out.println("2.Issue a book");
+					System.out.println("3.Show book Issued details");
+					System.out.println("4.Exit");
 					c1=sc.nextInt();
 					switch(c1)
 					{
+					case 1:{try{ArrayList<BookInventory>list = 
+							service.getAllBooks();
+							for(BookInventory obj : list)
+							{
+								System.out.println(obj);
+							}
+							}
+							catch(LibException e)
+							{
+								System.out.println(e.getMessage());
+							}
+						
+					}break;
 					case 2:{
 						BooksRegistration reg=issue();
 						int id=service.issue(reg);
@@ -92,10 +129,14 @@ public class MainLib {
 						BooksTransaction book= service.showDetail(userid);
 						System.out.println("Book Details Of "+userid+" i :");
 						System.out.println(book);
-					}
+					}break;
+					case 4:System.exit(0);
+					break;
 					default:System.out.println("Invalid Choice....!!!!!");
 						
-					}
+					}System.out.println("do you want to continue 1-yes 0-No");
+		            c1 = sc.nextInt();	
+				}while(c1!=0);
 					
 				}
 					
@@ -107,6 +148,9 @@ public class MainLib {
 				}
             
             }
+            case 3:System.exit(0);
+            break;
+            default:System.out.println("Invalid Choice....");
             
            }
             System.out.println("do you want to continue 1-yes 0-No");
@@ -122,11 +166,12 @@ public class MainLib {
 		int b=sc.nextInt();
 		System.out.println("Enter User ID:");
 		int u=sc.nextInt();
-	    LocalDate today=LocalDate.now();
+	 //   LocalDate day=LocalDate.now();
+		
 	    book=new BooksRegistration();
 	    book.setBook_id(b);
 	    book.setUser_id(u);
-	    book.setReg_date(today);
+	   // book.setReg_date(day);
 
 		return book;
 	}

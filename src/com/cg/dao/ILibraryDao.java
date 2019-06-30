@@ -1,5 +1,7 @@
 package com.cg.dao;
 
+import java.util.ArrayList;
+
 import com.cg.dto.BookInventory;
 import com.cg.dto.BooksRegistration;
 import com.cg.dto.BooksTransaction;
@@ -13,10 +15,13 @@ public interface ILibraryDao {
 	    
 	    int addBook(BookInventory book) throws LibException;
 	    BookInventory removeBook(int id) throws LibException;
+		ArrayList <BookInventory> getAllBooks() throws LibException;
+
 	    
 	    int issue(BooksRegistration reg) throws LibException;
 	    
 	    BooksTransaction showDetail(int user_id) throws LibException;
-	    
+		ArrayList <BooksTransaction> getAlltrans() throws LibException;
+
 	    String librarian(int user_id) throws LibException;
 }

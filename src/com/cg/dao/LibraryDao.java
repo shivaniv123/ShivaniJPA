@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 
 import com.cg.dto.BookInventory;
@@ -237,18 +239,18 @@ int id=0;
 		logger.info("in issue book");
 		logger.info("input is"+reg);
 		
-		String qry="insert into Book_inventory values(rId_seq.nextval,?,?,?)";
+		String qry="insert into Book_inventory values(rId_seq.nextval,?,?,sysdate)";
 		
 		int bookid=reg.getBook_id();
 		int userid=reg.getUser_id();
-		LocalDate bDate=reg.getReg_date();
-		java.sql.Date date=java.sql.Date.valueOf(bDate);
+		LocalDate Date=reg.getReg_date();
+	//	java.sql.Date date=java.sql.Date.valueOf(Date);
 		try
 		{
 			PreparedStatement pstmt=con.prepareStatement(qry);
 			pstmt.setInt(1, bookid);
 			pstmt.setInt(2,userid);
-			pstmt.setDate(3, date);
+		//	pstmt.setDate(3, date);
 			int row=pstmt.executeUpdate();
 			if(row > 0)
 			{
@@ -267,7 +269,7 @@ int id=0;
 			logger.error("error in insert  = "+e.getMessage());
 			throw new LibException(e.getMessage());
 		}
-		Book_transaction(id,bDate);
+		Book_transaction(id,Date);
 		return id;
 	}
 
@@ -381,7 +383,7 @@ int id=0;
 	    	if(rs.next())
 	    			{
 	    		String lib=rs.getString(1);
-	    		    
+	    		    y=lib;
 	    			}
 	    	else
 	    		throw new LibException("USER WITH ID "+id+"not found");
@@ -391,6 +393,45 @@ int id=0;
 			throw new LibException(e.getMessage());
 			}
 		return y;
+	}
+
+	@Override
+	public ArrayList<BookInventory> getAllBooks() throws LibException {
+		// TODO Auto-generated method stub
+		ArrayList <BookInventory> list=new ArrayList <BookInventory>();
+		String qry="select * from Book_inventory";
+		
+		Statement stmt;
+		try {
+			stmt = con.createStatement();
+			ResultSet rs=stmt.executeQuery(qry);
+			
+			while(rs.next())
+			{
+				int id=rs.getInt(1);
+				String name=rs.getString(2);
+				String author1=rs.getString(3);
+				String author2=rs.getString(4);
+				String publisher=rs.getString(5);
+				int yearofpublisher=rs.getInt(6);
+				
+				BookInventory emp=new BookInventory(id,name,author1,author2,publisher,yearofpublisher);
+				list.add(emp);
+				
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new LibException(e.getMessage());
+		}
+
+		return list;
+	}
+
+	@Override
+	public ArrayList<BooksTransaction> getAlltrans() throws LibException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

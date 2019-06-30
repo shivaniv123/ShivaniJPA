@@ -10,7 +10,8 @@ public class BooksRegistration {
 	private int user_id;
 	private LocalDate reg_date;
 	
-	public BooksRegistration() {}
+	public BooksRegistration(){}
+	
 	
 	public int getReg_id() {
 		return reg_id;

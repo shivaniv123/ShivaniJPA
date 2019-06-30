@@ -1,5 +1,7 @@
 package com.cg.service;
 
+import java.util.ArrayList;
+
 import com.cg.dto.BookInventory;
 import com.cg.dto.BooksRegistration;
 import com.cg.dto.BooksTransaction;
@@ -12,6 +14,8 @@ public interface ILibraryService {
     
     int addBook(BookInventory book) throws LibException;
     BookInventory removeBook(int id) throws LibException;
+	ArrayList <BookInventory> getAllBooks() throws LibException;
+
     
     int issue(BooksRegistration reg) throws LibException;
     

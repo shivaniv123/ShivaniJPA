@@ -1,5 +1,6 @@
 package com.cg.service;
 
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import com.cg.dao.ILibraryDao;
@@ -67,6 +68,12 @@ public class LibraryService implements ILibraryService {
 		// TODO Auto-generated method stub
 		return dao.librarian(user_id);
 	}
+	
+	@Override
+	public ArrayList<BookInventory> getAllBooks() throws LibException {
+		// TODO Auto-generated method stub
+		return dao.getAllBooks();
+	}
 
 	@Override
 	public boolean validateName(String name) {
@@ -113,5 +120,7 @@ public class LibraryService implements ILibraryService {
 			return false;
 		}
 	}
+
+	
 
 }
