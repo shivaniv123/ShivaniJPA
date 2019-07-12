@@ -1,0 +1,26 @@
+Users:
+
+create table Users ( user_id (varchar2(4)), user_name (varchar2(15), password(varchar2(7)),
+	 email_id(varchar2(25)), librarian(varchar))
+	 
+	 sequence -create sequence uId_seq start with 1000 maxvalue 10000 increment by 1 nocycle; 
+	
+BooksInventory: create table Book_Inventory (book_id(varchar2(4)), book_name(varchar2(20)),
+ author1(varchar2(15),author2(varchar2(15), publisher(varchar2(20)),
+  yearofpublication(varchar2(4)));
+  
+  	 sequence -create sequence bId_seq start with 1 maxvalue 100 increment by 1 nocycle; 
+
+  
+BooksRegistration: create table Book_Registration( registration_id(varchar2(4)), book_id (varchar2(4)),
+	 user_id(varchar2(4)), registrationdate(date));
+	 
+	   	 sequence -create sequence rId_seq start with 3000 maxvalue 4000 increment by 1 nocycle; 
+	 
+	 
+	 
+BooksTransaction:create table Book_Transaction (transaction_id(varchar2(4)), registration_id(varchar2(4)),
+	 	 issue_date(date), return_date(date), fine(number(3)));
+
+	 	 	   	 sequence -create sequence tId_seq start with 5000 maxvalue 6000 increment by 1 nocycle; 
+	 	 

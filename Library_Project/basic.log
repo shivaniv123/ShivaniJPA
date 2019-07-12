@@ -1,0 +1,112 @@
+INFO - in add user
+INFO - input isUsers [user_id=0, user_name=Soumya, password=rajpoot, email_id=soumya@gmail.com, librarian=Y]
+INFO - in get user id
+INFO - got message with id  :1020
+INFO - completed get userid
+INFO - inserted successfully and id is =1020
+INFO - in add user
+INFO - input isBookInventory [book_id=0, book_name=HarryPotter, author1=JKRowling, author2=RobertGalbraith, publisher=Pottermore, yearofpublisher=1997]
+ERROR - error in insert  = ORA-02289: sequence does not exist
+
+INFO - in add user
+INFO - input isBookInventory [book_id=0, book_name=HarryPotter, author1=JKRowling, author2=RobertGalbraith, publisher=Pottermore, yearofpublisher=1997]
+INFO - inserted successfully and id is =0
+INFO - in add user
+INFO - input isUsers [user_id=0, user_name=Shivani, password=verma, email_id=shivani@gmail.com, librarian=N]
+INFO - in get user id
+INFO - got message with id  :1021
+INFO - completed get userid
+INFO - inserted successfully and id is =1021
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=100, user_id=1021, reg_date=2019-06-30]
+ERROR - error in insert  = ORA-00947: not enough values
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=2019-06-30]
+ERROR - error in insert  = ORA-00947: not enough values
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+ERROR - error in insert  = ORA-00947: not enough values
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=2019-06-30]
+ERROR - error in insert  = ORA-00947: not enough values
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=0, user_id=1021, reg_date=null]
+ERROR - error in insert  = ORA-00947: not enough values
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=0, user_id=1021, reg_date=null]
+ERROR - error in insert  = ORA-02291: integrity constraint (SYSTEM.REGBOOK_FK) violated - parent key not found
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=0, user_id=1021, reg_date=null]
+ERROR - error in insert  = ORA-02291: integrity constraint (SYSTEM.REGBOOK_FK) violated - parent key not found
+
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=1, user_id=1021, reg_date=null]
+INFO - in get user id
+INFO - got message with id  :3012
+INFO - completed get userid
+INFO - inserted successfully and id is =3012
+INFO - in get transcation id
+INFO - got message with id  :5007
+INFO - completed get id
+INFO - inserted successfully5007
+INFO - in add user
+INFO - input isBookInventory [book_id=0, book_name=BhagwatGita, author1=VYASA, author2=NONE, publisher=gitaPress, yearofpublisher=1984]
+INFO - inserted successfully and id is =0
+INFO - in issue book
+INFO - input isBooksRegistration [reg_id=0, book_id=21, user_id=1021, reg_date=null]
+INFO - in get user id
+INFO - got message with id  :3013
+INFO - completed get userid
+INFO - inserted successfully and id is =3013
+INFO - in get transcation id
+INFO - got message with id  :5008
+INFO - completed get id
+INFO - inserted successfully5008
+INFO - in get user id
+ERROR - errorORA-08002: sequence RID_SEQ.CURRVAL is not yet defined in this session
+
+INFO - in add user
+INFO - input isUsers [user_id=0, user_name=Meghana, password=verma, email_id=meghana@gmail.com, librarian=N]
+INFO - in get user id
+INFO - got message with id  :1040
+INFO - completed get userid
+INFO - inserted successfully and id is =1040
+INFO - in add user
+INFO - input isUsers [user_id=0, user_name=Kuldeep, password=singh, email_id=kuldeep@gmail.com, librarian=Y]
+INFO - in get user id
+INFO - got message with id  :1060
+INFO - completed get userid
+INFO - inserted successfully and id is =1060

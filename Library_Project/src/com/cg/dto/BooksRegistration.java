@@ -1,13 +1,18 @@
 package com.cg.dto;
 
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 public class BooksRegistration {
 
 	private int reg_id;
 	private int book_id;
 	private int user_id;
-	private Date reg_date;
+	private LocalDate reg_date;
+	
+	public BooksRegistration(){}
+	
+	
 	public int getReg_id() {
 		return reg_id;
 	}
@@ -26,13 +31,13 @@ public class BooksRegistration {
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
-	public Date getReg_date() {
+	public LocalDate getReg_date() {
 		return reg_date;
 	}
-	public void setReg_date(Date reg_date) {
+	public void setReg_date(LocalDate reg_date) {
 		this.reg_date = reg_date;
 	}
-	public BooksRegistration(int reg_id, int book_id, int user_id, Date reg_date) {
+	public BooksRegistration(int reg_id, int book_id, int user_id, LocalDate reg_date) {
 		super();
 		this.reg_id = reg_id;
 		this.book_id = book_id;
