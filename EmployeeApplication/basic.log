@@ -1,0 +1,18 @@
+INFO - in add employee
+INFO - input isEmployee [empId=0, empName=Tushar, empSal=45545, bDate=1195-03-22]
+INFO - in get employee id
+INFO - got message with id  :2021
+INFO - completed get employeeid
+INFO - inserted successfully and id is =2021
+INFO - in add employee
+INFO - input isEmployee [empId=0, empName=Shivani, empSal=15000, bDate=2018-07-21]
+INFO - in get employee id
+INFO - got message with id  :2040
+INFO - completed get employeeid
+INFO - inserted successfully and id is =2040
+INFO - in add employee
+INFO - input isEmployee [empId=0, empName=hina, empSal=40000, bDate=1998-05-27]
+INFO - in get employee id
+INFO - got message with id  :2041
+INFO - completed get employeeid
+INFO - inserted successfully and id is =2041
