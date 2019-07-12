@@ -1,0 +1,12 @@
+INFO - in add cabRequest
+INFO - input isCabRequest [request_id=0, customer_name=Shivani, phone_number=9795765757, date_of_request=null, request_status=Not Accepted, cab_number=null, address_of_pickup=mumbai, pincode=400100]
+INFO - in add cabRequest
+INFO - input isCabRequest [request_id=0, customer_name=Shivani, phone_number=9795765757, date_of_request=null, request_status=Not Accepted, cab_number=null, address_of_pickup=mumbai, pincode=400010]
+INFO - in add cabRequest
+INFO - input isCabRequest [request_id=0, customer_name=Shivani, phone_number=9795765787, date_of_request=null, request_status=Not Accepted, cab_number=null, address_of_pickup=mumbai, pincode=410010]
+INFO - in add cabRequest
+INFO - input isCabRequest [request_id=0, customer_name=Shiv, phone_number=9875643210, date_of_request=null, request_status=Not Accepted, cab_number=null, address_of_pickup=mumbai, pincode=284001]
+ERROR - error in insert  = Invalid column index
+INFO - in add cabRequest
+INFO - input isCabRequest [request_id=0, customer_name=Shiva, phone_number=9795765757, date_of_request=null, request_status=Not Accepted, cab_number=null, address_of_pickup=mumbai, pincode=480011]
+ERROR - error in insert  = Invalid column index
